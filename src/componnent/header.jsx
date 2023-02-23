@@ -6,19 +6,23 @@ import './littel-c.css'
 
 const listOf = [
   {
-    "nameOf": "Home"
+    "nameOf": "Home",
+    'link': '/Home' 
 
   },
   {
-    "nameOf": "About"
+    "nameOf": "About",
+    'link':   '/About'
 
   },
   {
-    "nameOf": "Menu"
+    "nameOf": "Menu",
+    'link':   '/Menue'
 
   },
   {
-    "nameOf": "Reservation"
+    "nameOf": "Reservation",
+    'link':    '/Reservation-table'
 
   }
   
@@ -107,7 +111,11 @@ const Header = () => {
                   style={{
                     marginLeft: "20px"
                   }}
-                  key={e.nameOf}>{e.nameOf}
+                  
+                  key={e.nameOf}
+                  href={e.link}
+                  >
+                    {e.nameOf}
 
                   </a>)
 

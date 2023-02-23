@@ -8,23 +8,30 @@ import LandingSection from './componnent/LandingSection'
 import Rating from './componnent/ratin'
 import Raservation from './componnent/reserveTable'
 // import { AlertProvider } from './context/alertContext'
-
 // import './App.css'
-
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 
 function App() {
 return(
   <main>
-    
-    <Header/>
-    <LandingSection/>  
-    <Heighlight/>
-    <Rating/>
-    <AboutUs/>
-    <Footer/>
-    <Raservation/>
-    
+    <BrowserRouter>
+    <Routes>
+      <Route path='/Home' element={<LandingSection/>}/>
+      <Route index element={<LandingSection/>}/>
+      <Route path='/About' element={<AboutUs/>}/>
+      <Route path='/Menue' element={<Heighlight/>}/>
+      <Route path='/Reservation-table' element={<Raservation/>}/>
+        
+    {/* <Header/> */}
+    {/* <LandingSection/>   */}
+    {/* <Heighlight/> */}
+    {/* <Rating/> */}
+    {/* <AboutUs/> */}
+    {/* <Footer/> */}
+    {/* <Raservation/> */}
+    </Routes>
+    </BrowserRouter>
   </main>
 
   )

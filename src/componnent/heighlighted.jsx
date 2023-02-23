@@ -4,6 +4,10 @@ import GreekSlad from '../imagess/dish-1.png';
 import Bruchetta from '../imagess/bruschetta.png';
 import LemonDessert from '../imagess/lemon dessert.png';
 import scooter from '../imagess/scooter-icon.png'
+import Header from "./header";
+import LandingSection from "./LandingSection";
+import Rating from "./ratin";
+import Footer from "./Footer";
 
 
 const specail = "This Weak Specials";
@@ -41,11 +45,18 @@ const card2 = [
 ]
 
 const Heighlight = () =>(
-    <Box w={'100%'} mt={'70px'} justifyContent={'center'}>
+    <>
+    <Header/>
+    <LandingSection/>
+    <Box 
+    w={'100%'} 
+    mt={'70px'} 
+    justifyContent={'center'} 
+    >
 
         <Box 
-        ml={{base: "50px", md: "250px", lg: "300px"}} 
-        mr={{base: "50px", md: "250px", lg: "300px"}}
+        ml={{base: "50px", md: "100px", lg: "300px"}} 
+        mr={{base: "50px", md: "100px", lg: "300px"}}
         my={{base: "20px", md: "10px", lg: "10px"}}
         >
             <HStack>
@@ -77,6 +88,9 @@ const Heighlight = () =>(
 
 </Flex>
     </Box>
+<Rating/>
+<Footer/>
+    </>
 ) 
 
 export default Heighlight;

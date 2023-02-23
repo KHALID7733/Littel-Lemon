@@ -1,6 +1,8 @@
-import {Stack, Box, Card, Flex, Heading, HStack, Image, Spacer, Text, VStack } from "@chakra-ui/react";
+import {Stack, Box, Card, Flex, Heading, HStack, Image, Spacer, Text, VStack, SimpleGrid, GridItem } from "@chakra-ui/react";
 import resturenA from '../imagess/Mario and Adrian A.jpg';
 import resturenB from '../imagess/Mario and Adrian b.jpg';
+import Footer from "./Footer";
+import Header from "./header";
 
 const sectionOfText =
     {
@@ -15,41 +17,80 @@ const sectionOfText =
 
 const AboutUs = ()=>{
     return(
-        <Box 
-maxH={'600px'}
-maxW={'1440px'}
-mt={'5'}
->
 
-    <Flex gap={'5'}
-        flexDirection={'auto'}
-        justifyContent={'center'}
-    >
+        <>
 
-        <Box maxH={'468px'} maxW={'945px'} >
-    <HStack>
-        
-        <Box maxH={'468px'} maxW={'429.72px'}>
+        <Header/>
+<SimpleGrid as={'article'} my={'100px'}  templateColumns={{base: "repeat(6, 1fr)", md: "repeat(8, 1fr)", lg: "repeat(12, 1fr)"}}>
+
+
+<GridItem colSpan={{base: "6", md: "4", lg: "6"}}>
+
+    
+        <Box p={'10'} >
         <Stack>
 
-            <Heading>{sectionOfText.title}</Heading>
+            <Heading
+                  fontFamily={'Markazi Text'} 
+                  mb={3}
+                  fontSize={{base: "64px", md: "40px", lg: " 40px"}}
+                  fontWeight={{base: "500", md: "500", lg: "600"}}
+                  lineHeight={{base: "78.5px", md: "80px", lg: "90px"}}
+            
+            
+            >{sectionOfText.title}</Heading>
             <Text as={'md'}>{sectionOfText.subTitle}</Text>
-            <Text>{sectionOfText.discription}</Text>
+            <Text
+             mb={2} fontFamily={'karla'} my={'2'}
+            >{sectionOfText.discription}</Text>
 
         </Stack>
         
         </Box>
-        <Spacer></Spacer>
+        </GridItem>
 
-<Box width={'515.28px'} h={'468px'} position={'relative'}>
-            <Image src={sectionOfText["img-1"]} h={'338px'} w={'272px'}  top={'5'} right='30px' position={'absolute'} borderRadius={2}/>
-            <Image src={sectionOfText["img-2"]} h={'338px'} w={'272px'}position={'absolute'} top={'100px'} borderRadius={'2'} />
+      <GridItem colSpan={{base: "6", md: "4", lg: "6"}}>  
+<Box 
+position={'relative'}
+mb={'7'}
+height={{base: "350px", md: "400px", lg: "450px"}}
+
+>
+            <Image 
+            src={sectionOfText["img-1"]} 
+            h={{base: "220px", md: "300px", lg: "338px"}} 
+            w={{base: "270px", md: "220px", lg: "272px"}}  
+            top={'5'} 
+            right={{base: "55px", md: "50px", lg: "170px"}} 
+            position={'absolute'} 
+            borderRadius={2}/>
+            
+            <Text 
+            as={'figcaption'}
+            display={{base: "block", md: "none", lg: "none"}}
+            position={'absolute'}
+            top={'250px'}
+            left={'50px'}            
+            >
+                Littel Lemon owners Marip and Adrian.
+            </Text>
+
+
+            <Image 
+            src={sectionOfText["img-2"]} 
+            h={{base: "200px", md: "300px", lg: "338px"}} 
+            w={{base: "180px", md: "220px", lg: "272px"}}  
+            display={{base: "none", md: "block", lg: "block"}}
+            position={'absolute'} 
+            top={'100px'} 
+            
+            borderRadius={'2'} />
             </Box>    
 
-    </HStack>
-        </Box>
-    </Flex>
-</Box>
+            </GridItem>
+    </SimpleGrid>
+    <Footer/>   
+    </> 
 );
 }
 
