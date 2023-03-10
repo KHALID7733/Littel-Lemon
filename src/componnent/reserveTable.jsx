@@ -20,18 +20,19 @@ const Raservation = ()=>{
 
     return (
         <>
-        <Header/>
-        <Flex as={'form'} justifyContentc={'center'} padding={{base: '50px', md: '150px', lg: '150px'}} direction={'column'}
+        
+        <Flex as={'form'} justifyContent={'center'} padding={{base: '50px', md: '150px', lg: '150px'}} direction={'column'}
+        gap={'4'}
         >
  <Heading 
       
       as="h1"
       fontFamily={'Markazi Text'} 
       mb={10}
-      fontSize={{base: "64px", md: "40px", lg: " 40px"}}
+      fontSize={{base: "44px", md: "40px", lg: " 40px"}}
       color={"black"}
       fontWeight={{base: "500", md: "500", lg: "600"}}
-      lineHeight={{base: "78.5px", md: "80px", lg: "90px"}}
+      lineHeight={{base: "58.5px", md: "80px", lg: "90px"}}
       >Reservation Table</Heading>
 
             <FormControl>

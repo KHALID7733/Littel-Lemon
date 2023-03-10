@@ -64,6 +64,7 @@ const Rating = () =>{
                 ratingOfPeople.map((e)=>{
                     return(
                         <RatingCard
+                        key={e.name}
                         // icon={e.icon}
                         imageSrc={e.image}
                         comment={e.comment}

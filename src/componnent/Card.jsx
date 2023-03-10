@@ -2,9 +2,10 @@ import { Icon, Button, Card, CardBody, CardFooter, CardHeader, Heading, HStack, 
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const Card1 = ({ title, description, imageSrc, price, icon, order }) => {
+const Card1 = ({ title, description, imageSrc, price, icon, order, dish }) => {
  
  return (
+  <a href={dish}>
   <Card width="264.67px" height={'439px'} borderRadius={'md'} background={'blackAlpha.100'}>
     <CardBody>
         {/* width should be 264.67px */}
@@ -24,7 +25,7 @@ const Card1 = ({ title, description, imageSrc, price, icon, order }) => {
        </HStack>
 
   </Card>
-
+  </a>
  );
 };
 

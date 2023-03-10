@@ -105,18 +105,19 @@ const Footer = () => {
              fontWeight={{base: "300", md: "300", lg: "500"}}
              
              >Doormat Nav igation</Heading>
-             
+              <VStack mb={'3'}>
           {
             listOf.map((e)=>{
               return(
-                <VStack mb={'3'}>
-                <a href="">
+               
+                <a href="" key={e.nameOf}>
                   {e.nameOf}
                 </a>
-                </VStack>
+                
               );
             })
           }
+          </VStack>
           </Box>
           
 </GridItem>
@@ -134,17 +135,19 @@ const Footer = () => {
                fontWeight={{base: "300", md: "300", lg: "500"}}
               textAlign={'center'}
           >Contact</Heading>
+          <VStack mb={'3'}>
           {
             contect.map((e)=>{
               return(
-                <VStack mb={'3'}>
-                <a href="">
+                
+                <a key={e.nameOf} href="">
                   {e.nameOf}
                 </a>
-                </VStack>
+                
               );
             })
           }
+          </VStack>
           </Box>
           </GridItem>
 
@@ -160,17 +163,20 @@ colSpan={{base: "2", md: "2", lg: "3"}}
           fontWeight={{base: "300", md: "300", lg: "500"}}
           
           >Social Media Links</Heading>
+
+<VStack mb={'3'}>
           {
             socialMedia.map((e)=>{
               return(
-                <VStack mb={'3'}>
-                <a href="">
+                
+                <a href="" key={e.nameOf}>
                   {e.nameOf}
                 </a>
-                </VStack>
+
               );
             })
           }
+</VStack>
           </Box>
           
 </GridItem>

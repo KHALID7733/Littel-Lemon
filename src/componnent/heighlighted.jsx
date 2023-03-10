@@ -24,6 +24,7 @@ const card2 = [
         'imageSrc': GreekSlad,
         'order': 'Order a delivery',
         'icon': scooter,
+        'dish': '/dish2',
         
     },
     {
@@ -33,6 +34,7 @@ const card2 = [
         'imageSrc': Bruchetta,
         'order': 'Order a delivery',
         'icon': scooter,
+        'dish': '/dish1',
     },
     {
         'titel': 'Lemon Dessert',
@@ -41,12 +43,13 @@ const card2 = [
         'imageSrc': LemonDessert,
         'order': 'Order a delivery',
         'icon': scooter,
+        'dish': '/dish4',
     },
 ]
 
 const Heighlight = () =>(
     <>
-    <Header/>
+    
     <LandingSection/>
     <Box 
     w={'100%'} 
@@ -77,6 +80,7 @@ const Heighlight = () =>(
                         price={e.price}
                         order={e.order}
                         icon={e.icon}
+                        dish={e.dish}
                         >
                         
                         </Card1>

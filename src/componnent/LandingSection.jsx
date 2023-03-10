@@ -4,6 +4,7 @@ import FullScreenSection from "./FullScreenSection";
 import titleImage from '../imagess/Titel-image.png';
 import Header from "./header";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Title = "Littel Lemon";
 const bio1 = "Chicago";
@@ -13,11 +14,13 @@ const bio2 = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi qui
 
 const LandingSection = () => (
       <>
-      <Header/>
+      
       <Grid templateColumns={{base: "repeat(6, 1fr)", md: "repeat(8, 1fr)", lg: "repeat(12, 1fr)"}}
+      h={'100vh'}
       justifyContent="center"
       alignItems="center"
       backgroundColor="#495E57"
+      
       >
 
 <GridItem
@@ -62,7 +65,7 @@ colSpan={{base: "3", md: "4", lg: "4"}}
 <GridItem
 colSpan={{base: "3", md: "4", lg: "8"}}
 >
-<HStack>
+<HStack mb={'16'}>
 <Box
 
 ml={{base: "20px", md: "40px", lg: " 80px"}}
@@ -70,15 +73,15 @@ my={{base: "90px", md: "40px", lg: " 80px"}}
 position={'relative'}
 
 >
-      
+      <a href="/dish3">
       <Image src={titleImage} h={{base: "152px", md: "300px", lg: " 418px"}} w={{base: "147px", md: "280px", lg: "375px"}} borderRadius={8} position={{base: "relative", md: "relative", lg: "relative"} }
 
       right={{base: "-5px", md: "-10px", lg: "-110px"}}
-      top={{base: "90px", md: "50px", lg: "130px"}}
+      top={{base: "90px", md: "50px", lg: "70px"}}
       
       
       />
-
+</a>
       
     </Box>
 
@@ -86,6 +89,7 @@ position={'relative'}
 
 </GridItem>
 </Grid>
+
 </>  
 );
 
